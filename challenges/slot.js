@@ -46,7 +46,8 @@ function calculateResult (position1, position2, position3) {
 
   if (position1 > reels.Reel1.length || position2 > reels.Reel2.length || position3 > reels.Reel3.length) { return }
 
-  const positions = [position1, position2, position3]
+  const positions = [...arguments]
+
   function countIndex (position) {
     if (position === reels.Reel1.length - 1) {
       return 0
@@ -138,4 +139,5 @@ function calculateResult (position1, position2, position3) {
     return acc + coins
   }, 0)
 }
+
 module.exports = calculateResult
