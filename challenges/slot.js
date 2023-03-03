@@ -44,7 +44,7 @@ function calculateResult (position1, position2, position3) {
     Reel3: ['lemon', 'apple', 'lemon', 'apple', 'cherry', 'lemon', 'banana', 'lemon']
   }
 
-  if (position1 > reels.Reel1.length || position2 > reels.Reel2.length || position3 > reels.Reel3.length) { return }
+  if (position1 > reels.Reel1.length - 1 || position2 > reels.Reel2.length - 1 || position3 > reels.Reel3.length - 1) { return }
 
   const positions = [...arguments]
 
